@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TimeDap — Privacy-First Time Tracking</title>
+  <meta name="description" content="Track your time across websites and apps. 100% local, private, and secure." />
+  <style>
+    :root {
+      --bg:#0b0c10; --bg2:#0f1116; --card:#111318; --edge:#1b1f2a;
+      --text:#e8e8f0; --muted:#a4a7b0; --accent:#52b788; --accent-ink:#04140a;
+      --positive:#86efac; --badge-bg:#15201a; --warning:#ffd166;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;color:var(--text)}
+    a{color:var(--accent);text-decoration:none} a:hover{opacity:.9}
+    .wrap{max-width:1024px;margin:0 auto;padding:42px 20px}
+    .hero{display:grid;gap:16px;margin:8px 0 10px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:var(--badge-bg);color:var(--positive);border:1px solid #1f2d25;padding:6px 12px;border-radius:999px;font-size:12px}
+    .shield{inline-size:14px;block-size:14px;border:2px solid var(--positive);border-radius:3px;display:inline-block}
+    h1{font-size:44px;line-height:1.1;margin:0}
+    p.lead{font-size:18px;color:var(--muted);margin:0}
+    .cta{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;padding:12px 18px;border-radius:12px;border:1px solid #2a6f4a}
+    .btn.secondary{background:#161a24;color:#cbd5e1;border:1px solid var(--edge)}
+    .btn.ghost{background:transparent;border:1px dashed var(--edge);color:#cbd5e1}
+    .section{margin-top:34px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+    .card{background:var(--card);border:1px solid var(--edge);border-radius:16px;padding:16px}
+    .card h3{margin:0 0 6px 0;font-size:18px}
+    .list{margin:10px 0 0 0;padding-left:18px;color:var(--muted)}
+    .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:12px}
+    .how .step{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:14px}
+    .mini{font-size:13px;color:var(--muted)}
+    .disclosure{margin-top:10px;font-size:14px;color:#cbd5e1}
+    .kicker{font-size:13px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    footer{margin:46px 0 14px;color:#8b8f98;font-size:14px}
+    code{background:#0e121a;border:1px solid #1a2130;padding:2px 6px;border-radius:6px}
+    .hr{height:1px;background:linear-gradient(90deg,transparent,#1a2130,transparent);margin:28px 0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badges">
+      <span class="badge"><span class="shield"></span> 100% Local • No Cloud Sync</span>
+      <span class="badge"><span class="shield"></span> Clear Permissions</span>
+      <span class="badge"><span class="shield"></span> Optional Desktop App</span>
+    </div>
+
+    <div class="hero">
+      <h1>TimeDap</h1>
+      <p class="lead">
+        Automatic time tracking for websites and desktop apps — with private, local-only storage and rich exports.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#" id="cws-link" rel="noopener">Add to Chrome</a>
+        <a class="btn secondary" href="#" id="desktop-link">Download Desktop App</a>
+        <a class="btn ghost" href="privacy.html">Privacy Policy</a>
+      </div>
+      <p class="disclosure mini">
+        Icons are retrieved from Google’s favicon service to display site icons. No activity data ever leaves your device.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="kicker">Why TimeDap</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Privacy-first by design</h3>
+          <p>Time logs live on your device only — in Chrome’s <code>storage.local</code> and a local JSON file for the desktop app. </p>
+        </div>
+        <div class="card">
+          <h3>Track apps & websites</h3>
+          <p>See time across native apps (e.g., editors, chat) and browser tabs in one place. Automatic; zero manual timers.</p>
+          <ul class="list">
+            <li>Idle-aware, millisecond precision</li>
+            <li>Daily rollups & history</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Smart tagging</h3>
+          <p>Label entries (e.g., <em>Coding</em>, <em>Project-1234</em>, <em>Client-Jonathan</em>) and slice reports by tag to understand where your focus goes.</p>
+        </div>
+        <div class="card">
+          <h3>Focus streaks</h3>
+          <p>See uninterrupted work streaks and your longest stretch each day to gamify deep work.</p>
+        </div>
+        <div class="card">
+          <h3>Custom schedules</h3>
+          <p>Track only during work hours (e.g., 8:00–17:00). Off-hours activity is ignored.</p>
+        </div>
+        <div class="card">
+          <h3>Exports & reporting</h3>
+          <p>Drill into trends and export to CSV, Excel, or PDF whenever you need a shareable snapshot.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section hr"></div>
+
+    <div class="section">
+      <div class="kicker">How it works</div>
+      <div class="how">
+        <div class="step">
+          <strong>1) Add the Chrome extension</strong>
+          <p>Tracks active tabs and saves website time locally. No account, no cloud.</p>
+        </div>
+        <div class="step">
+          <strong>2) (Optional) Install the desktop app</strong>
+          <p>Monitors the active application to include native apps. Data is stored in a local <code>tracking_data.json</code>.</p>
+        </div>
+        <div class="step">
+          <strong>3) Review & export</strong>
+          <p>Open the report, filter by tags or dates, and export to CSV, Excel, or PDF.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="kicker">Transparency</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Permissions</h3>
+          <p>We request only what’s needed for tracking and icons.</p>
+          <ul class="list">
+            <li><code>activeTab</code> &amp; <code>tabs</code> for current site / tab time</li>
+            <li><code>storage</code> to save logs locally</li>
+            <li>Network access only to fetch favicons from Google’s favicon service</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Icons (Favicons)</h3>
+          <p>Site icons are fetched via Google’s favicon service using the domain only. Activity data is never transmitted.</p>
+          <p class="mini">Example: <code>https://www.google.com/s2/favicons?domain=&lt;domain&gt;&amp;sz=32</code></p>
+        </div>
+        <div class="card">
+          <h3>Your data, your device</h3>
+          <p>Delete or export at any time. Uninstalling removes the extension data; the desktop JSON file remains on your machine until you delete it.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="section">
+      <p>© <span id="year"></span> TimeDap • <a href="privacy.html">Privacy</a> • <a href="#" id="support-link">Support</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Replace these URLs when ready
+    document.getElementById('cws-link').href = '#';         // Chrome Web Store listing
+    document.getElementById('desktop-link').href = '#';     // Desktop app download URL
+    document.getElementById('support-link').href = '#';     // Support/contact
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

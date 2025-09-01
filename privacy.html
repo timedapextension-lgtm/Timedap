@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TimeDap — Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for the TimeDap Chrome extension." />
+  <style>
+    body{margin:0;background:#0b0c10;color:#e8e8f0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif}
+    .wrap{max-width:860px;margin:0 auto;padding:42px 20px}
+    h1{margin-top:0} a{color:#52b788;text-decoration:none}
+    code{background:#0e121a;border:1px solid #1a2130;padding:2px 6px;border-radius:6px;color:#cbd5e1}
+    .note{background:#12151d;border:1px solid #1a2130;border-radius:12px;padding:12px;margin:16px 0;color:#b8c0cc}
+    ul{margin-top:0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: 2025-08-31</em></p>
+
+    <p><strong>TimeDap</strong> is a privacy-first time-tracking extension. Processing happens locally in your browser and time logs are stored in Chrome’s <code>storage.local</code>. We do not operate a backend for TimeDap and we do not sell or share data for advertising.</p>
+
+    <h2>Data we handle (on your device)</h2>
+    <ul>
+      <li><strong>Browsing activity metadata</strong> — the active tab’s URL and title are read to attribute time spent per site. Full page content is not inspected or stored.</li>
+      <li><strong>Idle state</strong> — to pause/resume timers when you’re away.</li>
+      <li><strong>Window and tab focus</strong> — to know which site is currently active.</li>
+      <li><strong>Local settings and time logs</strong> — saved in <code>storage.local</code>.</li>
+    </ul>
+
+    <h2>Network requests</h2>
+    <p>To display a small site icon next to each entry, TimeDap fetches favicons from Google’s favicon service:</p>
+    <p><code>https://www.google.com/s2/favicons?domain=&lt;domain&gt;&amp;sz=32</code></p>
+    <ul>
+      <li>This request <strong>reveals the domain name</strong> you are viewing to Google in order to retrieve its icon.</li>
+      <li>No additional activity data (titles, timestamps, logs, identifiers) is sent in this request.</li>
+      <li>If a favicon is unavailable, TimeDap uses a built‑in default icon.</li>
+    </ul>
+
+    <div class="note">
+      You can disable remote icon fetching in a future settings toggle (planned). When disabled, TimeDap will use the browser-provided <code>tab.favIconUrl</code> when available or a built‑in default icon.
+    </div>
+
+    <h2>Permissions we request (and why)</h2>
+    <ul>
+      <li><code>tabs</code> — read the active tab’s URL/title and listen for tab changes; also used to read <code>favIconUrl</code> when available.</li>
+      <li><code>windows</code> — detect window focus changes to know when Chrome is active.</li>
+      <li><code>idle</code> — determine when you are inactive so timers can pause.</li>
+      <li><code>alarms</code> — schedule periodic bookkeeping tasks.</li>
+      <li><code>storage</code> — store your settings and time logs locally.</li>
+      <li><code>host_permissions</code> (<code>&lt;all_urls&gt;</code>) — required so the extension can access the active tab’s URL/title across sites.</li>
+    </ul>
+
+    <h2>Data retention & control</h2>
+    <ul>
+      <li>All time logs are kept locally on your device until you delete them.</li>
+      <li>You can clear your local data at any time from the extension settings or by removing the extension.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:timedapextension@gmail.com">Support</a></p>
+
+    <p style="margin-top:28px;color:#9aa3af;font-size:14px">This document is provided for transparency and is not legal advice.</p>
+  </div>
+</body>
+</html>
